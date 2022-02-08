@@ -1,11 +1,11 @@
 import React from "react";
 
-import classes from "./AboutPage.module.css";
+import classes from "./classes.module.css";
 
 const AboutPage = () => {
   return (
     <div>
-      <h1 className={classes.headerText}>About Page</h1>
+      <h1>About Page</h1>
     </div>
   );
 };
