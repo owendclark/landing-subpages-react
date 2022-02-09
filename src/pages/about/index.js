@@ -24,7 +24,7 @@ const AboutPage = () => {
           <div className={classes.imageContainer}>
             <div className={classes.blob}>
               <img
-                src="assets/images/logo.png"
+                src="assets/images/image1.png"
                 alt="logo"
                 width={500}
                 height={500}
@@ -49,6 +49,7 @@ const AboutPage = () => {
             </p>
           </div>
         </div>
+        <div className={classes.divider1}></div>
         <div className={classes.cardContainerLeftJustify}>
           <div className={classes.contentContainer}>
             <h3 className={classes.subjectHeading}>
@@ -65,7 +66,7 @@ const AboutPage = () => {
           <div className={classes.imageContainer}>
             <div className={classes.blob2}>
               <img
-                src="assets/images/image2.jpeg"
+                src="assets/images/image2.png"
                 alt="logo"
                 width={500}
                 height={500}
@@ -74,11 +75,12 @@ const AboutPage = () => {
             </div>
           </div>
         </div>
+        <div className={classes.divider2}></div>
         <div className={classes.cardContainerLeftJustify}>
           <div className={classes.imageContainer}>
             <div className={classes.blob3}>
               <img
-                src="assets/images/image1.png"
+                src="assets/images/image3.png"
                 alt="logo"
                 width={500}
                 height={500}
