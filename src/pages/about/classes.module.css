@@ -54,57 +54,94 @@
 }
 
 .image {
-    width: 50px;
-    height: 50px;
+  width: 50px;
+  height: 50px;
 }
 
 .cardContainerLeftJustify {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin: 0 5rem 3rem 6.5rem;
-
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 5rem 3rem 6.5rem;
 }
 
 .cardImage {
-    width: 250px;
-    height: 250px;
+  width: 250px;
+  height: 250px;
 }
 
 .imageContainer {
-    margin-right: 6.5rem;
+  margin-right: 6.5rem;
+  width: 400px;
+  height: 400px;
 }
 
 .subjectHeading {
-    font-size: 3rem;
-    font-weight: 600;
-    font-family: "Manrope";
-    font-style: normal;
-    letter-spacing: 1px;
-    margin: 0 0 1.5rem 0;
-    background: linear-gradient(89.97deg, #ae67fa 1.84%, #f49867 102.67%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    line-height: 60px;
+  font-size: 3rem;
+  font-weight: 600;
+  font-family: "Manrope";
+  font-style: normal;
+  letter-spacing: 1px;
+  margin: 0 0 1.5rem 0;
+  background: linear-gradient(89.97deg, #ae67fa 1.84%, #f49867 102.67%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 60px;
 }
 
 .contentContainer {
-    margin-top: 2rem;
+  margin-top: 2rem;
 }
 
 .contentText {
-    font-size: 1rem;
-    font-weight: 300;
-    font-family: "Manrope";
-    font-style: normal;
-    color: #fff;
-    margin: 0;
-    letter-spacing: 1px;
-    line-height: 26.08px;
+  font-size: 1rem;
+  font-weight: 300;
+  font-family: "Manrope";
+  font-style: normal;
+  color: #fff;
+  margin: 0;
+  letter-spacing: 1px;
+  line-height: 26.08px;
 }
 
 .firstLetterContent {
-    font-size: 1.5rem;
-    margin-right: 0.1rem;
+  font-size: 1.5rem;
+  margin-right: 0.1rem;
+}
+
+.blob {
+  aspect-ratio: 900/900;
+  width: 400px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url("./blob.svg");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.blob2 {
+  aspect-ratio: 900/900;
+  width: 400px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url("./blob2.svg");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.blob3 {
+  aspect-ratio: 900/900;
+  width: 400px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url("./blob3.svg");
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

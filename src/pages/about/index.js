@@ -22,14 +22,15 @@ const AboutPage = () => {
       <main className={classes.mainContainer}>
         <div className={classes.cardContainerLeftJustify}>
           <div className={classes.imageContainer}>
-            {/* Background Curves */}
-            <img
-              src="assets/images/logo.png"
-              alt="logo"
-              width={500}
-              height={500}
-              className={classes.cardImage}
-            />
+            <div className={classes.blob}>
+              <img
+                src="assets/images/logo.png"
+                alt="logo"
+                width={500}
+                height={500}
+                className={classes.cardImage}
+              />
+            </div>
           </div>
           <div className={classes.contentContainer}>
             <h3 className={classes.subjectHeading}>
@@ -62,37 +63,40 @@ const AboutPage = () => {
             </p>
           </div>
           <div className={classes.imageContainer}>
-            {/* Background Curves */}
-            <img
-              src="assets/images/logo.png"
-              alt="logo"
-              width={500}
-              height={500}
-              className={classes.cardImage}
-            />
+            <div className={classes.blob2}>
+              <img
+                src="assets/images/image2.jpeg"
+                alt="logo"
+                width={500}
+                height={500}
+                className={classes.cardImage}
+              />
+            </div>
           </div>
         </div>
         <div className={classes.cardContainerLeftJustify}>
           <div className={classes.imageContainer}>
-            {/* Background Curves */}
-            <img
-              src="assets/images/logo.png"
-              alt="logo"
-              width={500}
-              height={500}
-              className={classes.cardImage}
-            />
+            <div className={classes.blob3}>
+              <img
+                src="assets/images/image1.png"
+                alt="logo"
+                width={500}
+                height={500}
+                className={classes.cardImage}
+              />
+            </div>
           </div>
           <div className={classes.contentContainer}>
             <h3 className={classes.subjectHeading}>
               Understanding the unthinkable, breaking down the unbearable…
             </h3>
             <p className={classes.contentText}>
-            <span className={classes.firstLetterContent}>T</span>rue education and learning comes from the understanding of
-              different Perspectives, whether they are “unthinkable” to you, or
-              just right. By learning to collaborate and converse with
-              individuals of different Perspectives, yourself and the world
-              around you will begin to open up with new opportunities and ideas.
+              <span className={classes.firstLetterContent}>T</span>rue education
+              and learning comes from the understanding of different
+              Perspectives, whether they are “unthinkable” to you, or just
+              right. By learning to collaborate and converse with individuals of
+              different Perspectives, yourself and the world around you will
+              begin to open up with new opportunities and ideas.
             </p>
           </div>
         </div>
