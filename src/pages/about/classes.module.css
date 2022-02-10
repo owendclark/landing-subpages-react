@@ -163,3 +163,16 @@
   background-size: cover;
   background-image: url("./topWave.svg");
 }
+
+.firstCard {
+    background-color: #002233;
+
+}
+
+.secondCard {
+    background-color: #0066ff;
+}
+
+.thirdCard {
+    background-color: #002233;
+}

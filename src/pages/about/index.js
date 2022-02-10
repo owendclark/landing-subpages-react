@@ -20,8 +20,11 @@ const AboutPage = () => {
         </div>
       </header>
       <main className={classes.mainContainer}>
-        <div className={classes.cardContainerLeftJustify}>
+        <div
+          className={`${classes.cardContainerLeftJustify} ${classes.firstCard}`}
+        >
           <div className={classes.imageContainer}>
+            ``
             <div className={classes.blob}>
               <img
                 src="assets/images/image1.png"
@@ -50,7 +53,9 @@ const AboutPage = () => {
           </div>
         </div>
         <div className={classes.divider1}></div>
-        <div className={classes.cardContainerLeftJustify}>
+        <div
+          className={`${classes.cardContainerLeftJustify} ${classes.secondCard}`}
+        >
           <div className={classes.contentContainer}>
             <h3 className={classes.subjectHeading}>
               Putting the “u” back in user…
@@ -76,7 +81,9 @@ const AboutPage = () => {
           </div>
         </div>
         <div className={classes.divider2}></div>
-        <div className={classes.cardContainerLeftJustify}>
+        <div
+          className={`${classes.cardContainerLeftJustify} ${classes.thirdCard}`}
+        >
           <div className={classes.imageContainer}>
             <div className={classes.blob3}>
               <img
