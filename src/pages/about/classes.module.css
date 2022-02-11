@@ -5,31 +5,7 @@
   width: 100%;
   min-height: 100vh;
   margin-top: 0;
-  background: -moz-radial-gradient(
-    circle at 3% 25%,
-    rgba(49, 51, 78, 1) 0%,
-    rgba(10, 10, 16, 1) 100%
-  );
-  background: -webkit-radial-gradient(
-    circle at 3% 25%,
-    rgba(49, 51, 78, 1) 0%,
-    rgba(10, 10, 16, 1) 100%
-  );
-  background: -o-radial-gradient(
-    circle at 3% 25%,
-    rgba(49, 51, 78, 1) 0%,
-    rgba(10, 10, 16, 1) 100%
-  );
-  background: -ms-radial-gradient(
-    circle at 3% 25%,
-    rgba(49, 51, 78, 1) 0%,
-    rgba(10, 10, 16, 1) 100%
-  );
-  background: radial-gradient(
-    circle at 3% 25%,
-    rgba(49, 51, 78, 1) 0%,
-    rgba(10, 10, 16, 1) 100%
-  );
+  background-color: #002233;
 }
 
 .aboutText {
@@ -63,17 +39,20 @@
   flex-direction: row;
   align-items: center;
   padding: 0 5rem 3rem 6.5rem;
+  height: 500px;
+  position: relative;
 }
 
 .cardImage {
   width: 250px;
-  height: 250px;
+  height: auto;
 }
 
 .imageContainer {
   margin-right: 6.5rem;
   width: 400px;
   height: 400px;
+  z-index: 1;
 }
 
 .subjectHeading {
@@ -83,15 +62,13 @@
   font-style: normal;
   letter-spacing: 1px;
   margin: 0 0 1.5rem 0;
-  background: linear-gradient(89.97deg, #ae67fa 1.84%, #f49867 102.67%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #fff;
   line-height: 60px;
 }
 
 .contentContainer {
   margin-top: 2rem;
+  z-index: 1;
 }
 
 .contentText {
@@ -146,6 +123,7 @@
   align-items: center;
 }
 
+/*
 .divider1 {
   aspect-ratio: 900/450;
   width: 100%;
@@ -164,15 +142,59 @@
   background-image: url("./topWave.svg");
 }
 
-.firstCard {
-    background-color: #002233;
+*/
 
+.firstCard {
+  background-color: #002233;
 }
 
 .secondCard {
-    background-color: #0066ff;
+  background-color: #0066ff;
 }
 
 .thirdCard {
-    background-color: #002233;
+  background-color: #002233;
+}
+
+.waveDivider1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.waveDivider1 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 150px;
+}
+
+.waveDivider1 path {
+  fill: #002233;
+}
+
+.waveDivider2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+  margin-top: -10px;
+}
+
+.waveDivider2 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 150px;
+  transform: rotateY(180deg);
+}
+
+.waveDivider2 path {
+  fill: #0066ff;
 }
