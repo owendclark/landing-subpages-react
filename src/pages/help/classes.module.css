@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
+
+.backgroundContainer {
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  background-color: #002233;
+  position: relative;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 4rem 0 2rem;
+}
+
+.helpText {
+  margin: 0;
+  color: #fff;
+  font-family: "Manrope";
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.mainContainer {
+  width: 75%;
+  margin: 1rem auto;
+}
+
+.faqs {
+  text-align: center;
+  margin: 0;
+  color: #fff;
+  font-family: "Manrope";
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.question {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 26px;
+  /* identical to box height */
+
+  color: #ffffff;
+
+  opacity: 0.6;
+}
+
+.answer {
+  margin-top: -2rem;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 26px;
+  /* identical to box height */
+
+  color: #ffffff;
+
+  opacity: 0.8;
+}
+
+.concerns {
+  margin-top: 4rem;
+}
+
+.headingText {
+  text-align: center;
+  margin: 0;
+  color: #fff;
+  font-family: "Manrope";
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.input {
+  width: 300px;
+  height: 45px;
+  background: linear-gradient(
+    95.65deg,
+    rgba(165, 199, 183, 0.2) -30.63%,
+    rgba(93, 66, 87, 0.2) 100%
+  );
+  border-radius: 10px;
+  border: 1px solid rgba(165, 199, 183, 1);
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+}
+
+.form {
+  margin: 0 auto;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.textField {
+  margin-top: 0.5rem;
+  height: 30px;
+  border-radius: 10px;
+  border: 1px solid rgba(165, 199, 183, 1);
+  padding: 1rem;
+  background: transparent;
+  color: rgba(165, 199, 183, 1);
+  font-size: 1rem;
+  font-weight: 300;
+  font-family: "Manrope";
+  font-style: normal;
+  letter-spacing: 1px;
+  line-height: 26.08px;
+}
+
+.button {
+  margin-top: 2rem;
+  height: 30px;
+  line-height: 26.08px;
+  padding: 1rem;
+  border-radius: 10px;
+}

@@ -1,7 +1,7 @@
+export { default as PrivacyPolicyPage } from "./privacyPolicy";
 export { default as AboutPage } from "./about";
 export { default as HelpPage } from "./help";
 export { default as OurTeamPage } from "./ourTeam";
-export { default as PrivacyPolicyPage } from "./privacyPolicy";
 export { default as TermsPage } from "./terms";
 
 export const Nav = () => {

@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
+
+.container {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  background-color: #002233;
+  position: relative;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 2rem 4rem 0 2rem;
+}
+
+.image {
+  width: 50px;
+  height: 50px;
+}
+
+.contentContainer {
+  width: 75%;
+  margin: 2rem auto;
+}
+
+.link {
+  background: linear-gradient(89.97deg, #ae67fa 1.84%, #f49867 102.67%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.contentText {
+  font-size: 25px;
+  font-weight: 300;
+  font-family: "Manrope";
+  font-style: normal;
+  color: #fff;
+  margin: 0;
+  letter-spacing: 1px;
+  line-height: 40.45px;
+}
+
+.bottomWave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.bottomWave svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 150px;
+}
+
+.bottomWave path {
+  fill: #0066ff;
+}
+
+.headerText {
+  font-size: 4rem;
+  font-weight: 600;
+  font-family: "Manrope";
+  font-style: normal;
+  letter-spacing: 1px;
+  line-height: 60px;
+  background: linear-gradient(89.97deg, #ae67fa 1.84%, #f49867 102.67%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
