@@ -10,6 +10,8 @@ import classes from "./classes.module.css";
 
 const HelpPage = () => {
   const [currentFAQ, setCurrentFAQ] = useState(0);
+  const [isFormSubmitted, setIsFormSubmitted] = useState(false);
+  const [isFormSubmitError, setIsFormSubmitError] = useState(false);
 
   const [formData, setFormData] = useState({
     subject: "",
@@ -21,13 +23,15 @@ const HelpPage = () => {
   const onSubmitHandler = (event) => {
     event.preventDefault();
 
+    setIsFormSubmitError(false);
+
     send(
       "service_ih3p8mn",
       "template_fmwjipm",
       formData,
       "user_sGKx5TT6YXUxzHZPgrOqP"
     )
-      .then((res) => console.log("Sent Email!", res.status, res.text))
+      .then((_res) => setIsFormSubmitted(true))
       .catch((err) => console.log("Failed with error", err));
   };
 
@@ -66,7 +70,6 @@ const HelpPage = () => {
             height={100}
           />
         </div>
-        <h1 className={classes.helpText}>Help</h1>
       </header>
       <main className={classes.mainContainer}>
         <section className={classes.faqs}>
@@ -84,46 +87,57 @@ const HelpPage = () => {
           <h1 className={classes.headingText}>
             Custom Concern? We're Here to Help.
           </h1>
-          <form onSubmit={onSubmitHandler} className={classes.form}>
-            <input
-              type="text"
-              name="subject"
-              placeholder="Subject"
-              value={formData.subject}
-              onChange={onChangeHandler}
-              className={classes.textField}
-              required
-            />
-            <textarea
-              name="description"
-              placeholder="Description"
-              value={formData.description}
-              onChange={onChangeHandler}
-              className={`${classes.textField} ${classes.textArea}`}
-              rows={5}
-              required
-            />
-            <input
-              type="text"
-              name="username"
-              placeholder="Username"
-              value={formData.username}
-              onChange={onChangeHandler}
-              className={classes.textField}
-            />
-            <input
-              type="text"
-              name="email"
-              placeholder="Email"
-              value={formData.email}
-              onChange={onChangeHandler}
-              className={classes.textField}
-              required
-            />
-            <button type="submit" className={classes.button}>
-              Submit
-            </button>
-          </form>
+          {isFormSubmitted ? (
+            <div>
+              <h1 className={classes.submittedText}>Help Form Submitted</h1>
+            </div>
+          ) : (
+            <form onSubmit={onSubmitHandler} className={classes.form}>
+              <input
+                type="text"
+                name="subject"
+                placeholder="Subject"
+                value={formData.subject}
+                onChange={onChangeHandler}
+                className={classes.textField}
+                required
+              />
+              <textarea
+                name="description"
+                placeholder="Description"
+                value={formData.description}
+                onChange={onChangeHandler}
+                className={`${classes.textField} ${classes.textArea}`}
+                rows={5}
+                required
+              />
+              <input
+                type="text"
+                name="username"
+                placeholder="Username"
+                value={formData.username}
+                onChange={onChangeHandler}
+                className={classes.textField}
+              />
+              <input
+                type="text"
+                name="email"
+                placeholder="Email"
+                value={formData.email}
+                onChange={onChangeHandler}
+                className={classes.textField}
+                required
+              />
+              <button type="submit" className={classes.button}>
+                Submit
+              </button>
+              {isFormSubmitError && (
+                <p className={classes.errorText}>
+                  There was an error submitting your help form, please try again
+                </p>
+              )}
+            </form>
+          )}
         </section>
       </main>
     </div>
