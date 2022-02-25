@@ -1,33 +1,15 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import { send } from "emailjs-com";
 
+import NavigateBeforeIcon from "@mui/icons-material/NavigateBefore";
+import NavigateNextIcon from "@mui/icons-material/NavigateNext";
+
+import FAQs from "./FAQs";
+import FAQ from "./FAQ";
 import classes from "./classes.module.css";
 
 const HelpPage = () => {
-  /*
-  const subjectInputRef = useRef();
-  const descriptionInputRef = useRef();
-  const usernameInputRef = useRef();
-  const emailInputRef = useRef();
-
-  const submitHandler = (event) => {
-    event.preventDefault();
-
-    const enteredSubject = subjectInputRef.current.value;
-    const enteredDescription = descriptionInputRef.current.value;
-    const enteredUsername = usernameInputRef.current.value;
-    const enteredEmail = emailInputRef.current.value;
-
-    const helpData = {
-      subject: enteredSubject,
-      description: enteredDescription,
-      username: enteredUsername,
-      email: enteredEmail,
-    };
-
-    console.log(helpData);
-  };
-  */
+  const [currentFAQ, setCurrentFAQ] = useState(0);
 
   const [formData, setFormData] = useState({
     subject: "",
@@ -56,6 +38,22 @@ const HelpPage = () => {
     });
   };
 
+  const previousFAQHandler = () => {
+    if (currentFAQ === 0) {
+      setCurrentFAQ(FAQs.length - 1);
+    } else {
+      setCurrentFAQ(currentFAQ - 1);
+    }
+  };
+
+  const nextFAQHandler = () => {
+    if (currentFAQ === FAQs.length - 1) {
+      setCurrentFAQ(0);
+    } else {
+      setCurrentFAQ(currentFAQ + 1);
+    }
+  };
+
   return (
     <div className={classes.backgroundContainer}>
       <header className={classes.header}>
@@ -73,10 +71,14 @@ const HelpPage = () => {
       <main className={classes.mainContainer}>
         <section className={classes.faqs}>
           <h1 className={classes.headingText}>FAQs</h1>
-          <h3 className={classes.question}>Q: How do I create an article?</h3>
-          <h3 className={classes.answer}>
-            A: Press the plus icon on the navbar, and select create article.
-          </h3>
+          <div className={classes.faqContainer}>
+            <NavigateBeforeIcon fontSize="large" onClick={previousFAQHandler} />
+            <FAQ
+              question={FAQs[currentFAQ].question}
+              answer={FAQs[currentFAQ].answer}
+            />
+            <NavigateNextIcon fontSize="large" onClick={nextFAQHandler} />
+          </div>
         </section>
         <section className={classes.concerns}>
           <h1 className={classes.headingText}>
@@ -90,14 +92,16 @@ const HelpPage = () => {
               value={formData.subject}
               onChange={onChangeHandler}
               className={classes.textField}
+              required
             />
-            <input
-              type="text"
+            <textarea
               name="description"
               placeholder="Description"
               value={formData.description}
               onChange={onChangeHandler}
-              className={classes.textField}
+              className={`${classes.textField} ${classes.textArea}`}
+              rows={5}
+              required
             />
             <input
               type="text"
@@ -114,6 +118,7 @@ const HelpPage = () => {
               value={formData.email}
               onChange={onChangeHandler}
               className={classes.textField}
+              required
             />
             <button type="submit" className={classes.button}>
               Submit
@@ -126,38 +131,3 @@ const HelpPage = () => {
 };
 
 export default HelpPage;
-
-/*
-
-
-<form onSubmit={submitHandler}>
-            <div className={classes.inputContainer}>
-              <input
-                type="text"
-                placeholder="Subject"
-                className={classes.input}
-                ref={subjectInputRef}
-              />
-              <input
-                type="text"
-                placeholder="Description"
-                className={classes.input}
-                ref={descriptionInputRef}
-              />
-              <input
-                type="text"
-                placeholder="Username"
-                className={classes.input}
-                ref={usernameInputRef}
-              />
-              <input
-                type="text"
-                placeholder="Email"
-                className={classes.input}
-                ref={emailInputRef}
-              />
-              <button>Submit</button>
-            </div>
-          </form>
-
-*/
